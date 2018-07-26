@@ -1,0 +1,43 @@
+.gold {
+  color:gold;
+}
+.silver {
+  color: silver;
+}
+.bronze {
+  color:#cd7f32;
+}
+#gameLink {
+  text-align: center;
+  border: 10px solid red;
+  color: white;
+}
+.uno {
+  font-family: Impact;
+  font-size: 20px;
+  color: green;
+}
+body {
+  background-color: #0099cc;
+}
+h1 {
+  font-size: 20px;
+  font-family: Helvetica;
+}
+h3 {
+  font-size: 20px;
+  font-family: Helvetica;
+}
+#uno {
+  color: gold;
+}
+#credits {
+  color: #e11818;
+  font-family: Helvetica;
+  font-size: 12px;
+}
+#content {
+  font-family: Helvetica;
+  font-size: 15px;
+  color: silver;
+}
