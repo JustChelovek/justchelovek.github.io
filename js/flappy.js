@@ -55,7 +55,7 @@ function preload() {
   game.load.image('balloons', './assets/balloons.png');
   game.load.image('weights', './assets/weight.png');
   game.load.image('bg', './assets/bg2.png');
-  game.load.audio('soundtrack', './assets/song.wav');
+  game.load.audio('soundtrack', './assets/Song.wav');
 }
 
 /*
