@@ -34,6 +34,7 @@ var no3 = 0;
 var county = 0;
 var bonusWidth=50;
 var pipeWidth=50;
+var music;
 //var zabor1;
 //var zabor2;
 score = 0;
@@ -44,17 +45,17 @@ score = 0;
  * Loads all resources for the game and gives them names.
  */
 function preload() {
-  game.load.image("playerImg", "../assets/jamesBond.gif");
+  game.load.image("playerImg", "./assets/jamesBond.gif");
   //game.add.sprite(0, 300, 'playerImg');
-  game.load.audio("score", "../assets/point.ogg");
-  game.load.image('Bird', '../assets/Bird.gif');
-  game.load.image('pipeBlock', '../assets/pipe.png');
+  game.load.audio("score", "./assets/point.ogg");
+  game.load.image('Bird', './assets/Bird.gif');
+  game.load.image('pipeBlock', './assets/pipe.png');
   //game.load.image('zabor', '../assets/Zabor.png');
-  game.load.image('pipeEnd', '../assets/pipe-end.png');
-  game.load.image('balloons', '../assets/balloons.png');
-  game.load.image('weights', '../assets/weight.png');
-  game.load.image('bg', '../assets/bg2.png');
-
+  game.load.image('pipeEnd', './assets/pipe-end.png');
+  game.load.image('balloons', './assets/balloons.png');
+  game.load.image('weights', './assets/weight.png');
+  game.load.image('bg', './assets/bg2.png');
+  game.load.audio('soundtrack', './assets/song.wav');
 }
 
 /*
@@ -75,6 +76,8 @@ function create() {
   game.input.keyboard.addKey(Phaser.Keyboard.LEFT).onDown.add(three);
   game.input.keyboard.addKey(Phaser.Keyboard.UP).onDown.add(one);
   game.input.keyboard.addKey(Phaser.Keyboard.DOWN).onDown.add(two);
+  music = game.add.audio('soundtrack');
+  music.play();
   //zabor1 = game.add.sprite(110, 1, 'zabor');
   //zabor2 = game.add.sprite(110, 399, 'zabor');
   //game.physics.arcade.enable(zabor1);
@@ -138,6 +141,7 @@ function update() {
     game.state.restart();
     score=-1;
     gameGravity = 500;
+    music.stop();
   if (player.y>490) {
       gameOver();
     }
